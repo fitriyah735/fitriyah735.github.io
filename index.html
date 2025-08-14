@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Chessecake Pupus — Toko Cheesecake Serba Ada</title>
+  <meta name="description" content="Chessecake Pupus: cheesecake paling mantap. Order online, tinggal klik!"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css"/>
+  <meta name="theme-color" content="#F9CC00">
+</head>
+<body class="bg-grid">
+  <audio id="bgm" src="assets/audio/lofi-lite.wav" loop preload="auto"></audio>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-label="logo">🧀</div>
+        <h1>Chessecake Pupus <span style="font-size:11px;background:#FFF4D6;color:#5f4b32;border-radius:999px;padding:3px 8px;margin-left:8px">by Kamu</span></h1>
+      </div>
+      <div class="actions">
+        <button id="audioToggle" class="btn">▶️ Play BGM</button>
+        <button id="cartBtn" class="icon-btn" aria-label="Buka keranjang">🧺 <span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="slide-track">
+        <div class="slide"><img src="assets/img/slide1.svg" alt="Cheesecake Classic"></div>
+        <div class="slide"><img src="assets/img/slide2.svg" alt="Blueberry Bliss"></div>
+        <div class="slide"><img src="assets/img/slide3.svg" alt="Sunny Lemon"></div>
+      </div>
+      <div class="slider-dots" aria-label="Slider dots"></div>
+    </section>
+    <section class="section container">
+      <h2>Cheesecake Paling Kikinian 🚀</h2>
+      <p class="lead">Selamat datang di <strong>Chessecake Pupus</strong> — semua rasa ada, semua mood cocok. Klik, keranjang, bayar. Done!</p>
+      <div class="grid" id="productGrid"></div>
+    </section>
+  </main>
+  <aside class="drawer" id="cartDrawer" aria-label="Keranjang belanja">
+    <header><strong>Keranjang</strong><button class="icon-btn" onclick="document.getElementById('cartDrawer').classList.remove('open')">✖</button></header>
+    <div class="items" id="cartItems"></div>
+    <footer><div class="total-line"><span>Subtotal</span><strong id="subtotal">Rp 0</strong></div><button id="checkoutBtn" class="btn btn-primary" disabled>Checkout</button></footer>
+  </aside>
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="panel">
+      <header><strong>Checkout</strong></header>
+      <div class="content">
+        <form id="orderForm" class="form-grid">
+          <div class="full"><small>Isi data. Pembayaran simulasi.</small></div>
+          <div><label>Nama</label><input type="text" name="name" required placeholder="Nama lengkap"/></div>
+          <div><label>Email</label><input type="email" name="email" required placeholder="email@kamu.com"/></div>
+          <div class="full"><label>Alamat</label><textarea name="address" rows="3" required placeholder="Alamat lengkap"></textarea></div>
+          <div class="full"><button class="btn btn-primary" type="submit">Buat Pesanan</button><button type="button" class="btn" id="closeModal">Batal</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="site"><div class="container"><span class="pill">© 2025 Chessecake Pupus — Lite</span></div></footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
